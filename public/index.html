@@ -3,8 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/>
 </head>
-<body>
+<body ng-app="myApp">
+    <div class="container" ng-controller="mainCtrl">
+<br>
+        <center><h1>Check your results</h1></center>
+        <div class="row">
 
-</body>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="USN" ng-model="i_usn">
+                <br>
+                <button class="btn btn-primary" ng-click="get()">Get Results</button>
+                <br>
+                <br>
+                <h2 ng-bind="o_status_display"></h2>
+
+                <div id="output_section"  ng-hide="o_status">
+                <h1 id="name" ng-bind="o_name"></h1>
+                <h2 id="usn" ng-bind="o_usn"></h2>
+                <h3 id="sem" ng-bind="o_sem"></h3>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Internal marks</th>
+                        <th>External marks</th>
+                        <th>Total</th>
+                        <th>Result</th>
+                    </tr>
+
+                    <tr ng-repeat="mark in marks">
+                        <td>{{mark.code}}</td>
+                        <td>{{mark.subject}}</td>
+                        <td>{{mark.internal}}</td>
+                        <td>{{mark.external}}</td>
+                        <td>{{mark.total}}</td>
+                        <td>{{mark.result}}</td>
+                    </tr>
+                </table>
+                <h2 id="total" ng-bind="o_total"></h2>
+                <h1 id="final_result" ng-bind="o_final_result"></h1>
+                    <br><br>
+            </div>
+                </div>
+
+            <div class="col-md-6">
+                <h1>Graphs here</h1>
+
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+  </div>
+
+    </body>
 </html>

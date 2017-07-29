@@ -3,6 +3,7 @@ const express = require('express');
 const request = require('request');
 const cheerio = require('cheerio');
 const app = express();
+app.use("/",express.static('public'));
 app.get("/scrape/:usn",function(req,res){
     console.log(req.params['usn']);
     var usn=req.params['usn'];
