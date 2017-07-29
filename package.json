@@ -1,0 +1,22 @@
+{
+  "name": "vtu-results",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekori/meanVTU.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekori/meanVTU/issues"
+  },
+  "homepage": "https://github.com/abhishekori/meanVTU#readme",
+  "dependencies": {
+    "angular": "^1.6.5"
+  }
+}
